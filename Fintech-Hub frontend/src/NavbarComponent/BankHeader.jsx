@@ -38,7 +38,7 @@ const BankHeader = () => {
         </Link>
       </li>
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
           to="/bank/account/all"
           className="nav-link active"
@@ -46,7 +46,7 @@ const BankHeader = () => {
         >
           <b className="text-color">Branch Accounts </b>
         </Link>
-      </li>
+      </li> */}
 
       <li className="nav-item">
         <Link

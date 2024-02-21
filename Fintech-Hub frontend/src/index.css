@@ -35,7 +35,9 @@ code {
 }
 
 .bg-color {
-  background-color: #780000;
+  background-color:gray;
+  /* #780000 */
+
 }
 
 .rounded-card {

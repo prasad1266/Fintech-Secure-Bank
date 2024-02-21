@@ -65,7 +65,7 @@ const AdminHeader = () => {
         </Link>
       </li>
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
           to="/admin/all/bank/customers"
           className="nav-link active"
@@ -73,7 +73,7 @@ const AdminHeader = () => {
         >
           <b className="text-color">All Customers</b>
         </Link>
-      </li>
+      </li> */}
 
       <li className="nav-item">
         <Link
