@@ -37,11 +37,16 @@ const UserRegister = () => {
   };
 
   const validatePassword = () => {
-    const regex = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     setIsPasswordValid(regex.test(user.password));
   };
 
-  const isNameValid = /^[a-zA-Z]+$/.test(user.name);
+  // const validatePassword = () => {
+  //   const regex = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+  //   setIsPasswordValid(regex.test(user.password));
+  // };
+
+  const isNameValid = /^[a-zA-Z\s]+$/.test(user.name);
   const isContactValid = /^[6-9]\d{9}$/.test(user.contact); // Assuming India-based contact number
   const isAgeValid =
     /^[1-9]\d*$/.test(user.age) && user.age >= 18 && user.age <= 120 && user.age <= 2024 - 1900; // Not beyond 2024
@@ -151,7 +156,7 @@ const UserRegister = () => {
           style={{ width: "50rem" }}
         >
           <div className="card-header bg-color custom-bg-text text-center">
-            <h5 className="card-title">Register {user.roles}</h5>
+            <h5 className="card-title">Register {user.roles} Bank Branch Manager </h5>
           </div>
           <div className="card-body">
             <form className="row g-3" onSubmit={saveUser}>
@@ -203,6 +208,7 @@ const UserRegister = () => {
                   value={user.password}
                   required
                 />
+               
                 {!isPasswordValid && (
                   <p style={{ color: "red" }}>
                     Password must contain at least one capital letter, one

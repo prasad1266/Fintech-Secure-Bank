@@ -42,12 +42,13 @@ function App() {
         <Route path="/" element={<Home /> } />
         <Route path="/home" element={< Home /> } />
         <Route path="/home/all/hotel/location" element={<Home /> } />
-        <Route exact path='/about' component={About} />
+        <Route  path='/about'  element = { <About/> }  />
+        {/* component={About} */}
         <Route exact path='/services' component={Services} />
         <Route exact path='/portfolio' component={Portfolio} />
         <Route exact path='/testimonials' component={Testimonials} />
         <Route exact path='/blog' component={Blog} />
-        <Route path="contact" element={Contact } />
+        <Route path="/contact" element={ <Contact/> } />
         
         <Route path="/user/customer/register" element={<UserRegister />} />
         <Route path="/user/bank/register" element={<UserRegister />} />
